@@ -1,0 +1,5 @@
+yum -y install httpd mod_ssl ####### Download Apache
+systemctl start httpd        ####### Start Apache
+sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf ###### Install apache
+echo "html><body><h1>Hi there NTI 300!</h1></body></html>" >var/www/html/index.html ##### Post text to page
+systemctl restart httpd #### restarts Apache
